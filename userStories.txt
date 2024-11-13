@@ -1,0 +1,5 @@
+1. una pagina web muy sencilla 
+2. se utilizo HTML, CSS Y JAVASCRIPT
+3. la pagina web trata sobre una app del clima que te muestra el clima a nivel mundial 
+el clima se esta trayendo desde una api 
+tienes la opcion de buscar ciudades y pueblos te mostrara la humedad del lugar buscado, y tambien los grados centigrados 

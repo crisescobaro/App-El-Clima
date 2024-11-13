@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow", sans-serif;
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+  height: 100vh;
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .title {
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: 0 0 50px black;
+}
+header .weather-icon {
+  width: 60px;
+  margin-bottom: -20px;
+  margin-right: 20px;
+}
+
+/* Estilo para el input de ciudad */
+header #get-city {
+  width: 200px;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 0px;
+  outline: none;
+  box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.37);
+}
+
+/* Contenedor principal con los nuevos estilos */
+.outer {
+  width: 300px;
+  height: 380px; /* Ajustado para mantener altura original */
+  border-radius: 20px;
+  padding: 1px;
+  background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* Animación de punto */
+.dot {
+  width: 5px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 100px;
+  z-index: 2;
+  right: 10%;
+  top: 10%;
+  animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+  0%, 100% { top: 10%; right: 10%; }
+  25% { top: 10%; right: calc(100% - 35px); }
+  50% { top: calc(100% - 30px); right: calc(100% - 35px); }
+  75% { top: calc(100% - 30px); right: 10%; }
+}
+
+/* Tarjeta con estilos de fondo y diseño */
+.card {
+  z-index: 1;
+  width: 100%;
+  height: 104%;
+  border-radius: 20px;
+  border: solid 1px #202222;
+  background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Efecto de rayo */
+.ray {
+  width: 220px;
+  height: 45px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #c7c7c7;
+  opacity: 0.4;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(10px);
+  transform-origin: 10%;
+  top: 0%;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+/* Líneas decorativas */
+.line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #2c2c2c;
+}
+.topl { top: 10%; background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%); }
+.bottoml { bottom: 10%; }
+.leftl { left: 10%; width: 1px; height: 100%; background: linear-gradient(180deg, #747474 30%, #222424 70%); }
+.rightl { right: 10%; width: 1px; height: 100%; }
+
+/* Contenedor de información climática */
+.info-container {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  color: black;
+}
+
+/* Estilos individuales para el contenido */
+.city-name {
+  font-size: 23px;
+  margin: 20px 0;
+}
+.date-info {
+  font-size: 0.9em;
+  color: black;
+}
+.weather-deg {
+  font-size: 80px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: black;
+}
+.weather-condition, .humidity {
+  font-size: 1em;
+  color: black;
+}
+
+/* estilos input */
+.input11 {
+	background-color: #383838;
+	border: 1ex solid none;
+	border-top-width: 1.7em;
+	margin: 0;
+	padding: 0;
+	color: #383838;
+	word-wrap: break-word;
+	outline: 7px solid #383838;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+	transition: all 1s;
+	max-width: 200px;
+	font-weight: bold;
+	font-family: 'Courier New', Courier, monospace;
+   }
+   
+   .input11:hover {
+	border-top-width: 0.2em;
+	background-color: #f1e8e8;
+   }
+   
+   .input11:focus {
+	border-top-width: 0.2em;
+	background-color: #f1e8e8;
+   }
+
+   .titulo22 {
+	color: wheat;
+   }
+
+
+   /* From Uiverse.io by SharpTH */ 
+.btn-cssbuttons {
+	--btn-color: black;
+	position: relative;
+	padding: 16px 32px;
+	font-family: Roboto, sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1;
+	color: white;
+	background: none;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	cursor: pointer;
+	filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
+	transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+   
+   .btn-cssbuttons::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 10px;
+	z-index: -1;
+	width: 95%;
+	height: 94%;
+	background: var(--btn-color);
+	border-radius: 24px;
+	transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+   
+   .btn-cssbuttons span,
+   .btn-cssbuttons span span {
+	display: inline-flex;
+	vertical-align: middle;
+	transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+   
+   .btn-cssbuttons span {
+	transition-delay: 0.05s;
+   }
+   
+   .btn-cssbuttons span:first-child {
+	padding-right: 7px;
+   }
+   
+   .btn-cssbuttons span span {
+	margin-left: 8px;
+	transition-delay: 0.1s;
+   }
+   
+   .btn-cssbuttons ul {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	transform: translateY(-50%);
+   }
+   
+   .btn-cssbuttons ul li {
+	flex: 1;
+   }
+   
+   .btn-cssbuttons ul li a {
+	display: inline-flex;
+	vertical-align: middle;
+	transform: translateY(55px);
+	transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+   
+   .btn-cssbuttons ul li a:hover {
+	opacity: 0.5;
+   }
+   
+   .btn-cssbuttons:hover::before {
+	transform: scale(1.2);
+   }
+   
+   .btn-cssbuttons:hover span,
+   .btn-cssbuttons:hover span span {
+	transform: translateY(-55px);
+   }
+   
+   .btn-cssbuttons:hover ul li a {
+	transform: translateY(0);
+   }
+   
+   .btn-cssbuttons:hover ul li:nth-child(1) a {
+	transition-delay: 0.15s;
+   }
+   
+   .btn-cssbuttons:hover ul li:nth-child(2) a {
+	transition-delay: 0.2s;
+   }
+   
+   .btn-cssbuttons:hover ul li:nth-child(3) a {
+	transition-delay: 0.25s;
+   }
